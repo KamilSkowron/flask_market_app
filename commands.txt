@@ -1,0 +1,65 @@
+virtualenv flask
+cd flask
+source bin/activate
+pip install flask
+python helloWorld.py
+
+export FLASK_APP=market.py
+flask run
+
+export FLASK_DEBUG=1
+
+python3 -m pip install flask
+
+pip install flask-sqlalchemy
+
+
+python
+from market import db
+db.create_all()
+
+from market import Item
+item1 = Item()
+item1 = Item(name="IPhone 10", price=500, barcode='546154104831', description='desc')
+db.session.add(item1)
+db.session.commit()
+
+Item.query.all()
+
+from market.models import db
+db.drop_all()
+db.create_all()
+from market.models import User,Item
+u1 = User(username='jsc', password_hash = '123456', email_address='jsc@jsc.com')
+db.session.add(u1)
+db.session.commit()
+
+i1 = Item(name='Iphone 10', description='description', barcode='123456789123', price=800)
+db.session.add(i1)
+db.session.commit()
+
+User.query.filter_by(username='jsc')
+item1 = Item.query.all()[0]
+item1.owner = User.query.filter_by(username='jsc').first()
+
+db.session.add(item1)
+db.session.commit()
+db.session.rollback()
+item1.owner = User.query.filter_by(username='jsc').first().id
+
+i = Item.query.filter_by(name='Iphone 10')[0]
+i.owned_user
+
+pip install flask-wtf
+pip install wtforms
+
+
+import os
+os.urandom(12)
+98599b9101ab91191ba9f81d
+
+pip install flask_bcrypt
+pip install flask_login
+
+https://www.freeformatter.com/html-formatter.html
+html prettier

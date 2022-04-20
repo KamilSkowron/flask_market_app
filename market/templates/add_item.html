@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+Add Item
+{% endblock %}
+
+{% block content %}
+
+<body class="text-center">
+	<div class="container">
+		<form method="POST" class="form-signin" style="color:white">
+			{{ form.hidden_tag() }}
+
+			<h1 class="h3 mb-3 font-weight-normal">
+				Add Item
+			</h1>
+			<br>
+			{{ form.name.label() }}
+			{{ form.name(class="form-control", placeholder="Name") }}
+
+			{{ form.price.label() }}
+			{{ form.price(class="form-control", placeholder="Price") }}
+
+			{{ form.description.label() }}
+			{{ form.description(class="form-control", placeholder="Description") }}
+
+			<br>
+
+			{{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+		</form>
+	</div>
+</body>
+{% endblock %}

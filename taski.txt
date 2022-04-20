@@ -1,0 +1,5 @@
+1 dodac dodawanie nowych przedmiotow dla zalogowanych uzytkownikow
+2 wstanie itemu na sklep nie zmienia wlasciela na None
+3 sprzedaz nie jest natychmiastowa
+4 dopiero kupujacy zmienia wlasciela
+5 lista dostepnych itemow -> kazdy item powinien miec parametr czy jest na sprzedaz czy nie
